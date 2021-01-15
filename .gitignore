@@ -5,3 +5,7 @@ obj
 vendor
 .idea
 *.iml
+
+# ApprovalTests.NET
+*.bak
+*.received.*
