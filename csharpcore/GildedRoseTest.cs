@@ -8,7 +8,7 @@ namespace csharpcore
         [Fact]
         public void Foo()
         {
-            IList<Item> items = new List<Item> {new Item {Name = "foo", SellIn = 0, Quality = 0}};
+            IList<Item> items = new List<Item> {new Item("foo", 0, 0)};
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();
             Assert.Equal("fixme", items[0].Name);
