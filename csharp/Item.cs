@@ -9,7 +9,18 @@
         }
 
         public static Item CreateInstance(string name, int sellIn, int quality) {
-            return new Item(name, sellIn, quality);
+            if (name == "Aged Brie") {
+                return new AgedBried(name, sellIn, quality);
+            }
+            else if (name == "Backstage passes to a TAFKAL80ETC concert") {
+                return new BackstagePasses(name, sellIn, quality);
+            }
+            else if (name == "Sulfuras, Hand of Ragnaros") {
+                return new Sulfuras(name, sellIn, quality);
+            }
+            else {
+                return new Item(name, sellIn, quality);
+            }
         }
 
         public string Name { get; set; }
